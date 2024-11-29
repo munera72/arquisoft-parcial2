@@ -12,8 +12,9 @@ import lombok.Setter;
 @NoArgsConstructor
 public class StudentSubject {
 
-    @EmbeddedId
-    StudentSubjectKey id;
+    @Id
+    @GeneratedValue (strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @ManyToOne
     @MapsId("studentId")
