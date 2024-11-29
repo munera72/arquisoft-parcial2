@@ -10,23 +10,21 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Entity
 public class StudentSubject {
 
     @Id
-    @GeneratedValue (strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @ManyToOne
-    @MapsId("studentId")
-    @JoinColumn(name = "student_id")
+    @JoinColumn(name = "student_id", nullable = false)
     private Student student;
 
     @ManyToOne
-    @MapsId("courseId")
-    @JoinColumn(name = "course_id")
+    @JoinColumn(name = "subject_id", nullable = false)
     private Subject subject;
 
     private double grade;
     private String description;
-
 }

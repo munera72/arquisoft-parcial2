@@ -14,6 +14,9 @@ import java.util.List;
 @CrossOrigin("*")
 public class ApiController {
 
+    public ApiController(){
+
+    }
     private StudentService studentService;
     private SubjectService subjectService;
 
