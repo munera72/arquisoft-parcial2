@@ -25,10 +25,6 @@ public class ApiController {
         this.subjectService = subjectService;
     }
 
-    public ApiController(StudentService service) {
-        this.studentService = service;
-    }
-
     @GetMapping ("/get/grades/{personal_id}")
     public ResponseEntity<?> getStudentGrades(
             @PathVariable String personal_id
